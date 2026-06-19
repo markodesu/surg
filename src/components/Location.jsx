@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { CalendarDays, MapPin, MessageCircle, PhoneCall } from "lucide-react";
 import {
   CLINIC_2GIS_URL,
-  CLINIC_2GIS_WIDGET_URL,
   PHONE,
   PHONE_DISPLAY,
   WHATSAPP_LINK_APPOINTMENT,
 } from "../lib/contacts";
+import Map2Gis from "./Map2Gis";
 
 export default function Location() {
   return (
@@ -89,20 +89,12 @@ export default function Location() {
           viewport={{ once: true, amount: 0.4 }}
           className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/80 p-4 shadow-[0_14px_50px_rgba(15,23,42,0.06)] backdrop-blur"
         >
-          <div className="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white">
-            <iframe
-              title="Клиника Кортекс на карте 2ГИС"
-              src={CLINIC_2GIS_WIDGET_URL}
-              className="h-[24rem] w-full border-0"
-              loading="lazy"
-              allowFullScreen
-            />
-          </div>
+          <Map2Gis />
           <a
             href={CLINIC_2GIS_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-flex text-sm font-medium text-sky-700 transition-colors hover:text-sky-800"
+            className="mt-3 hidden text-sm font-medium text-sky-700 transition-colors hover:text-sky-800 md:inline-flex"
           >
             Открыть в 2ГИС →
           </a>
