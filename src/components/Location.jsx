@@ -33,9 +33,9 @@ export default function Location() {
             <div className="flex items-start gap-3">
               <MapPin className="mt-1 h-5 w-5 text-teal-700" />
               <div>
-                <p className="font-semibold text-slate-950">Адрес клиники</p>
+                <p className="font-semibold text-slate-950">Адрес хирургического центра</p>
                 <p className="mt-1 leading-7">
-                  Клиника Кортекс, проспект Жибек-Жолу, 224. 720045,
+                  Кортекс, проспект Жибек-Жолу, 224. 720045,
                   Свердловский район.
                 </p>
               </div>

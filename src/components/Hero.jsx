@@ -99,27 +99,14 @@ export default function Hero() {
           <div className="absolute inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-teal-200/60 via-white to-sky-200/60 blur-2xl" />
           <div className="relative flex w-full flex-col overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.12)] backdrop-blur">
             <div className="aspect-[3/4] w-full rounded-[1.5rem] border border-dashed border-teal-200 bg-[linear-gradient(180deg,rgba(13,148,136,0.18),rgba(15,23,42,0.04)),radial-gradient(circle_at_top,rgba(255,255,255,0.98),rgba(255,255,255,0.88))] p-6">
-              <div className="flex h-full flex-col justify-between rounded-[1.25rem] border border-white/60 bg-white/70 p-5 shadow-inner">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
-                      Врач и прием
-                    </p>
-                    <p className="mt-2 text-2xl font-semibold text-slate-900">
-                      Кто ведет прием
-                    </p>
-                    <p className="mt-2 max-w-xs text-sm leading-6 text-slate-600">
-                      Здесь можно разместить фото доктора, чтобы пациент сразу
-                      видел специалиста, к которому обращается.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-teal-600 px-3 py-2 text-xs font-semibold text-white shadow-lg shadow-teal-600/20">
-                    Бишкек
-                  </div>
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 bg-white/80 p-4">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-white/60 bg-white/70 p-5 shadow-inner">
+                <img
+                  src="/images/example.webp"
+                  alt="Доктор Байымбет Талайбеков, нейрохирург"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="relative z-10 mt-auto grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 backdrop-blur">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                       Что лечит
                     </p>
@@ -127,7 +114,7 @@ export default function Hero() {
                       Консультация, диагностика и сопровождение лечения
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-slate-200 bg-white/80 p-4">
+                  <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 backdrop-blur">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                       Специализация
                     </p>
