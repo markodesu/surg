@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { CalendarDays, MapPin, MessageCircle, PhoneCall } from "lucide-react";
 import {
+  CLINIC_2GIS_URL,
+  CLINIC_2GIS_WIDGET_URL,
   PHONE,
   PHONE_DISPLAY,
   WHATSAPP_LINK_APPOINTMENT,
@@ -89,13 +91,21 @@ export default function Location() {
         >
           <div className="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white">
             <iframe
-              title="Клиника Кортекс на карте"
-              src="https://www.google.com/maps?q=%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%9A%D0%BE%D1%80%D1%82%D0%B5%D0%BA%D1%81%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%96%D0%B8%D0%B1%D0%B5%D0%BA-%D0%96%D0%BE%D0%BB%D1%83%2C%20224%2C%20720045%2C%20%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD&output=embed"
+              title="Клиника Кортекс на карте 2ГИС"
+              src={CLINIC_2GIS_WIDGET_URL}
               className="h-[24rem] w-full border-0"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </div>
+          <a
+            href={CLINIC_2GIS_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex text-sm font-medium text-teal-700 transition-colors hover:text-teal-800"
+          >
+            Открыть в 2ГИС →
+          </a>
         </motion.div>
       </div>
     </section>
