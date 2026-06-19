@@ -88,7 +88,7 @@ export default function Services() {
                 rel="noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition-colors group-hover:text-teal-800"
               >
-                Узнать стоимость и записаться
+                Записаться на консультацию
               </a>
             </motion.article>
           );
