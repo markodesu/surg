@@ -35,7 +35,7 @@ export default function Footer() {
             href={WHATSAPP_LINK_TECH_SUPPORT}
             target="_blank"
             rel="noreferrer"
-            className="font-medium text-teal-700 transition-colors hover:text-teal-800"
+            className="font-medium text-sky-700 transition-colors hover:text-sky-800"
           >
             WhatsApp {TECH_SUPPORT_PHONE_DISPLAY}
           </a>

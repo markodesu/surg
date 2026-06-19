@@ -29,7 +29,7 @@ export default function Reviews() {
   return (
     <section className="relative overflow-hidden bg-slate-950 py-20 sm:py-24">
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.14),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(13,148,136,0.12),transparent_40%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(56,189,248,0.14),transparent_42%),radial-gradient(circle_at_85%_80%,rgba(14,165,233,0.12),transparent_40%)]"
         aria-hidden="true"
       />
       <div

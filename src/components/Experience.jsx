@@ -29,7 +29,7 @@ export default function Experience() {
   return (
     <section id="certificates" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
           Сертификаты
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
@@ -53,9 +53,9 @@ export default function Experience() {
             onClick={() => setActiveCertificate(certificate)}
             className="group text-left"
           >
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,253,245,0.72))] p-5 shadow-[0_14px_50px_rgba(15,23,42,0.06)] transition-shadow group-hover:shadow-[0_20px_60px_rgba(15,23,42,0.1)]">
-              <div className="flex aspect-[4/3] flex-col justify-between rounded-[1.35rem] border border-dashed border-teal-200 bg-white/80 p-4">
-                <div className="flex items-center justify-between text-teal-700">
+            <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.72))] p-5 shadow-[0_14px_50px_rgba(15,23,42,0.06)] transition-shadow group-hover:shadow-[0_20px_60px_rgba(15,23,42,0.1)]">
+              <div className="flex aspect-[4/3] flex-col justify-between rounded-[1.35rem] border border-dashed border-sky-200 bg-white/80 p-4">
+                <div className="flex items-center justify-between text-sky-700">
                   <GraduationCap className="h-6 w-6" />
                   <ShieldCheck className="h-5 w-5" />
                 </div>
@@ -98,10 +98,10 @@ export default function Experience() {
               >
                 <CircleX className="h-5 w-5" />
               </button>
-              <div className="rounded-[1.5rem] border border-dashed border-teal-200 bg-[linear-gradient(135deg,rgba(13,148,136,0.12),rgba(255,255,255,1))] p-6">
+              <div className="rounded-[1.5rem] border border-dashed border-sky-200 bg-[linear-gradient(135deg,rgba(56,189,248,0.12),rgba(255,255,255,1))] p-6">
                 <div className="flex min-h-[20rem] flex-col justify-between rounded-[1.25rem] border border-white/80 bg-white/90 p-6 shadow-inner">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-teal-700">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sky-700">
                       Сертификат
                     </p>
                     <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">

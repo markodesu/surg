@@ -12,11 +12,11 @@ export default function Home() {
     <main className="min-h-screen text-slate-900">
       <Header />
       <Hero />
-      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#effdfa_100%)]">
+      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#f0f9ff_100%)]">
         <About />
       </div>
       <Reviews />
-      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#effdfa_100%)]">
+      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#f0f9ff_100%)]">
         <Services />
         <Experience />
         <Location />

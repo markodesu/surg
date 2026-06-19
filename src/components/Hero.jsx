@@ -6,9 +6,9 @@ import { WHATSAPP_LINK_CONSULTATION } from "../lib/contacts";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[92vh] overflow-hidden bg-slate-950">
+    <section id="hero" className="relative min-h-dvh overflow-hidden bg-slate-950">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-slate-950 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
         aria-hidden="true"
       />
@@ -18,7 +18,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid min-h-[92vh] max-w-7xl items-center gap-12 px-4 py-28 sm:px-6 lg:grid-cols-[1.05fr_0.85fr] lg:px-8">
+      <div className="relative mx-auto grid min-h-dvh max-w-7xl items-center gap-12 px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-[1.05fr_0.85fr] lg:px-8">
         <div className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0, x: -32 }}
@@ -134,18 +134,15 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-
-        <motion.a
-          href="#about"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-slate-400 transition-colors hover:text-sky-400 lg:col-span-2"
-          aria-label="Прокрутить вниз"
-        >
-          <ChevronDown className="h-6 w-6 animate-bounce" />
-        </motion.a>
       </div>
+
+      <a
+        href="#about"
+        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center text-slate-400 transition-colors hover:text-sky-400"
+        aria-label="Прокрутить вниз"
+      >
+        <ChevronDown className="h-6 w-6 animate-bounce" />
+      </a>
     </section>
   );
 }

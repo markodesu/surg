@@ -22,6 +22,9 @@ export default function RootLayout({ children }) {
       lang="ru"
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+      </head>
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         {children}
       </body>

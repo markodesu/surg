@@ -61,7 +61,7 @@ export default function Header() {
           <span className="flex flex-col leading-tight">
             <span
               className={`text-[0.7rem] font-semibold uppercase tracking-[0.34em] ${
-                isScrolled ? "text-teal-700" : "text-sky-400"
+                isScrolled ? "text-sky-700" : "text-sky-400"
               }`}
             >
               Нейрохирург
@@ -97,7 +97,7 @@ export default function Header() {
             href={WHATSAPP_LINK_CONSULTATION}
             className={`inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 ${
               isScrolled
-                ? "bg-teal-600 shadow-teal-600/25"
+                ? "bg-sky-500 shadow-sky-500/25"
                 : "bg-sky-500 shadow-sky-500/25 hover:bg-sky-400"
             }`}
             target="_blank"
@@ -147,7 +147,7 @@ export default function Header() {
                 href={WHATSAPP_LINK_CONSULTATION}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-600/25"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-sky-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25"
               >
                 <Phone className="h-4 w-4" />
                 Связаться

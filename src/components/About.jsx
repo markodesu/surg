@@ -31,7 +31,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.4 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
             О докторе
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
@@ -42,7 +42,7 @@ export default function About() {
             с болями в спине и шее, межпозвоночными грыжами, неврологическими
             жалобами и другими заболеваниями позвоночника и нервной системы.
           </p>
-          <p className="mt-4 rounded-2xl border border-teal-100 bg-teal-50/60 px-5 py-4 text-base font-medium leading-7 text-teal-900">
+          <p className="mt-4 rounded-2xl border border-sky-100 bg-sky-50/60 px-5 py-4 text-base font-medium leading-7 text-sky-900">
             Специалист по нейроэндоскопии и микронейрохирургии
           </p>
           <p className="mt-4 text-base leading-7 text-slate-600">
@@ -66,7 +66,7 @@ export default function About() {
                 className="rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-[0_14px_50px_rgba(15,23,42,0.06)] backdrop-blur"
               >
                 <div className="flex items-start gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-teal-700">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-50 text-sky-700">
                     <Icon className="h-6 w-6" />
                   </span>
                   <div>

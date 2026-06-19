@@ -47,7 +47,7 @@ export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
           Услуги
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
@@ -73,7 +73,7 @@ export default function Services() {
               whileHover={{ y: -6 }}
               className="group rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-[0_14px_50px_rgba(15,23,42,0.06)] backdrop-blur transition-shadow hover:shadow-[0_20px_60px_rgba(15,23,42,0.1)]"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 text-teal-700 transition-colors group-hover:bg-teal-600 group-hover:text-white">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-sky-700 transition-colors group-hover:bg-sky-500 group-hover:text-white">
                 <Icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-xl font-semibold tracking-tight text-slate-950">
@@ -86,7 +86,7 @@ export default function Services() {
                 href={WHATSAPP_LINK_CONSULTATION}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition-colors group-hover:text-teal-800"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-700 transition-colors group-hover:text-sky-800"
               >
                 Записаться на консультацию
               </a>

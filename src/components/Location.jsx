@@ -14,7 +14,7 @@ export default function Location() {
   return (
     <section id="contacts" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-sky-700">
           Контакты
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
@@ -35,7 +35,7 @@ export default function Location() {
         >
           <div className="space-y-5 text-slate-700">
             <div className="flex items-start gap-3">
-              <MapPin className="mt-1 h-5 w-5 text-teal-700" />
+              <MapPin className="mt-1 h-5 w-5 text-sky-700" />
               <div>
                 <p className="font-semibold text-slate-950">Адрес хирургического центра</p>
                 <p className="mt-1 leading-7">
@@ -45,7 +45,7 @@ export default function Location() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CalendarDays className="mt-1 h-5 w-5 text-teal-700" />
+              <CalendarDays className="mt-1 h-5 w-5 text-sky-700" />
               <div>
                 <p className="font-semibold text-slate-950">График работы</p>
                 <p className="mt-1 leading-7">
@@ -54,10 +54,10 @@ export default function Location() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <PhoneCall className="mt-1 h-5 w-5 text-teal-700" />
+              <PhoneCall className="mt-1 h-5 w-5 text-sky-700" />
               <div>
                 <p className="font-semibold text-slate-950">Как связаться</p>
-                <a href={`tel:${PHONE}`} className="mt-1 block leading-7 text-teal-700">
+                <a href={`tel:${PHONE}`} className="mt-1 block leading-7 text-sky-700">
                   {PHONE_DISPLAY}
                 </a>
               </div>
@@ -69,7 +69,7 @@ export default function Location() {
               href={WHATSAPP_LINK_APPOINTMENT}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-600/20 transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-transform hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp
@@ -102,7 +102,7 @@ export default function Location() {
             href={CLINIC_2GIS_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-flex text-sm font-medium text-teal-700 transition-colors hover:text-teal-800"
+            className="mt-3 inline-flex text-sm font-medium text-sky-700 transition-colors hover:text-sky-800"
           >
             Открыть в 2ГИС →
           </a>
