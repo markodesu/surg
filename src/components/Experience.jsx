@@ -30,15 +30,15 @@ export default function Experience() {
     <section id="experience" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
-          Квалификация
+          Кто ведет прием
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-          Образование и квалификация
+          Доктор и его специализация
         </h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Плейсхолдеры дипломов и сертификатов можно заменить на реальные
-          документы без перестройки блока. При клике открывается модальное окно
-          на весь экран.
+          Здесь можно показать образование, сертификаты и профильную
+          подготовку доктора, чтобы сразу было понятно, кто принимает и чем
+          именно он занимается.
         </p>
       </div>
 

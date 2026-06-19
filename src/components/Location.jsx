@@ -14,11 +14,11 @@ export default function Location() {
           Контакты
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-          Где проходит прием в Бишкеке
+          Адрес и как связаться
         </h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Контактный блок собран для локального SEO и быстрой конверсии: адрес,
-          график работы, телефон и переход в WhatsApp без лишних шагов.
+          Здесь собраны адрес клиники, телефон и быстрый переход в WhatsApp,
+          чтобы пациент мог сразу задать вопрос и записаться на прием.
         </p>
       </div>
 
@@ -35,8 +35,8 @@ export default function Location() {
               <div>
                 <p className="font-semibold text-slate-950">Адрес клиники</p>
                 <p className="mt-1 leading-7">
-                  Бишкек, центр города, клиника по предварительной записи.
-                  Кабинет и этаж можно заменить на фактические данные.
+                  Клиника Кортекс, проспект Жибек-Жолу, 224. 720045,
+                  Свердловский район.
                 </p>
               </div>
             </div>
@@ -52,9 +52,9 @@ export default function Location() {
             <div className="flex items-start gap-3">
               <PhoneCall className="mt-1 h-5 w-5 text-teal-700" />
               <div>
-                <p className="font-semibold text-slate-950">Телефон</p>
-                <a href="tel:+996700000000" className="mt-1 block leading-7 text-teal-700">
-                  +996 700 000 000
+                <p className="font-semibold text-slate-950">Как связаться</p>
+                <a href="tel:+996555800766" className="mt-1 block leading-7 text-teal-700">
+                  +996 555 800 766
                 </a>
               </div>
             </div>
@@ -85,28 +85,14 @@ export default function Location() {
           viewport={{ once: true, amount: 0.4 }}
           className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/80 p-4 shadow-[0_14px_50px_rgba(15,23,42,0.06)] backdrop-blur"
         >
-          <div className="flex h-full min-h-[24rem] flex-col justify-between rounded-[1.35rem] bg-[linear-gradient(180deg,rgba(12,74,110,0.08),rgba(13,148,136,0.16))] p-5">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-600">
-                Карта Бишкека
-              </p>
-              <p className="mt-3 max-w-xl text-lg leading-8 text-slate-800">
-                На этапе разработки здесь стоит легкая заглушка. В продакшене ее
-                легко заменить на iframe 2ГИС или Google Maps без изменения
-                структуры секции.
-              </p>
-            </div>
-            <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {[
-                "ул. Чуй, Бишкек",
-                "2 этаж, кабинет 12",
-                "Прием нейрохирурга",
-              ].map((item) => (
-                <div key={item} className="rounded-2xl border border-white/70 bg-white/80 p-4 text-sm text-slate-700 shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
+          <div className="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white">
+            <iframe
+              title="Клиника Кортекс на карте"
+              src="https://www.google.com/maps?q=%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%9A%D0%BE%D1%80%D1%82%D0%B5%D0%BA%D1%81%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%96%D0%B8%D0%B1%D0%B5%D0%BA-%D0%96%D0%BE%D0%BB%D1%83%2C%20224%2C%20720045%2C%20%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD&output=embed"
+              className="h-[24rem] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </motion.div>
       </div>

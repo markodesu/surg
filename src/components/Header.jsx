@@ -58,7 +58,7 @@ export default function Header() {
               Neuro.KG
             </span>
             <span className="text-sm font-medium text-slate-900">
-              Доктор Нурлан Абдрахманов
+              Байымбет Талайбеков
             </span>
           </span>
         </a>
