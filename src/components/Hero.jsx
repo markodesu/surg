@@ -1,42 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Microscope, ShieldCheck } from "lucide-react";
+import { ArrowRight, ChevronDown, MessageCircle, ShieldCheck } from "lucide-react";
 import { WHATSAPP_LINK_CONSULTATION } from "../lib/contacts";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top_left,rgba(13,148,136,0.18),transparent_42%),radial-gradient(circle_at_top_right,rgba(14,165,233,0.14),transparent_36%)]" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
-        <div className="flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
+    <section id="hero" className="relative min-h-[92vh] overflow-hidden bg-slate-950">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-slate-950/78" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(56,189,248,0.12),transparent_45%),radial-gradient(circle_at_80%_20%,rgba(37,99,235,0.1),transparent_40%)]"
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto grid min-h-[92vh] max-w-7xl items-center gap-12 px-4 py-28 sm:px-6 lg:grid-cols-[1.05fr_0.85fr] lg:px-8">
+        <div className="max-w-3xl">
+          <motion.p
+            initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-teal-100 bg-white/80 px-4 py-2 text-sm font-medium text-teal-700 shadow-sm backdrop-blur"
+            className="text-sm font-semibold uppercase tracking-[0.32em] text-sky-400"
           >
-            <Microscope className="h-4 w-4" />
-            Специалист по нейроэндоскопии и микронейрохирургии
-          </motion.div>
+            Нейрохирург в Бишкеке
+          </motion.p>
 
           <motion.h1
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.55, delay: 0.05 }}
-            className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl"
+            className="mt-4 text-5xl font-semibold leading-[1.05] tracking-tight text-sky-400 sm:text-6xl lg:text-7xl"
           >
-            <span className="block text-2xl font-medium text-teal-700 sm:text-3xl lg:text-4xl">
-              Нейрохирург в Бишкеке
-            </span>
-            <span className="mt-2 block">Доктор Байымбет Талайбеков</span>
+            Байымбет Талайбеков
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.55, delay: 0.12 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl"
+            transition={{ duration: 0.55, delay: 0.1 }}
+            className="mt-6 text-xl font-medium leading-8 text-white sm:text-2xl"
+          >
+            Специалист по нейроэндоскопии и микронейрохирургии
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, x: -32 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55, delay: 0.14 }}
+            className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
           >
             Квалифицированная помощь при заболеваниях позвоночника и нервной
             системы. Консультация, диагностика и лечение для пациентов из
@@ -44,23 +59,23 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.55, delay: 0.18 }}
-            className="mt-8 flex flex-col gap-4 sm:flex-row"
+            className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
             <a
               href={WHATSAPP_LINK_CONSULTATION}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-teal-600/20 transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-500 px-7 py-4 text-base font-semibold text-white shadow-xl shadow-sky-500/25 transition-transform hover:-translate-y-0.5 hover:bg-sky-400"
             >
               <MessageCircle className="h-5 w-5" />
-              Записаться на консультацию
+              Записаться на приём
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-6 py-4 text-base font-semibold text-slate-900 backdrop-blur transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur transition-transform hover:-translate-y-0.5 hover:bg-white/10"
             >
               Услуги и направления
               <ArrowRight className="h-5 w-5" />
@@ -71,7 +86,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.22 }}
-            className="mt-10 grid max-w-2xl gap-4 sm:grid-cols-3"
+            className="mt-12 grid max-w-2xl gap-3 sm:grid-cols-3"
           >
             {[
               "10+ лет стажа",
@@ -80,10 +95,10 @@ export default function Hero() {
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-3xl border border-white/80 bg-white/75 p-4 shadow-[0_10px_40px_rgba(15,23,42,0.06)] backdrop-blur"
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm"
               >
-                <p className="flex items-center gap-2 text-sm font-medium text-slate-600">
-                  <ShieldCheck className="h-4 w-4 text-teal-600" />
+                <p className="flex items-center gap-2 text-sm font-medium text-slate-200">
+                  <ShieldCheck className="h-4 w-4 shrink-0 text-sky-400" />
                   {item}
                 </p>
               </div>
@@ -92,22 +107,44 @@ export default function Hero() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative mx-auto flex w-full max-w-xl items-stretch"
+          transition={{ duration: 0.6, delay: 0.12 }}
+          className="relative mx-auto hidden w-full max-w-md lg:block"
         >
-          <div className="absolute inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-teal-200/60 via-white to-sky-200/60 blur-2xl" />
-          <div className="relative flex w-full flex-col overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.12)] backdrop-blur">
-            <div className="aspect-[3/4] w-full overflow-hidden rounded-[1.5rem] border border-dashed border-teal-200">
+          <div
+            className="absolute -inset-6 rounded-[2rem] bg-sky-500/10 blur-3xl"
+            aria-hidden="true"
+          />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-950/30 p-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+            <div className="relative overflow-hidden rounded-[1.5rem]">
               <img
                 src="/images/example.webp"
                 alt="Доктор Байымбет Талайбеков, нейрохирург в Бишкеке"
-                className="h-full w-full object-cover"
+                className="aspect-[3/4] w-full object-cover object-top brightness-[0.92] saturate-[0.88] contrast-[1.03]"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-slate-950/25"
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 ring-1 ring-inset ring-white/10"
+                aria-hidden="true"
               />
             </div>
           </div>
         </motion.div>
+
+        <motion.a
+          href="#about"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-slate-400 transition-colors hover:text-sky-400 lg:col-span-2"
+          aria-label="Прокрутить вниз"
+        >
+          <ChevronDown className="h-6 w-6 animate-bounce" />
+        </motion.a>
       </div>
     </section>
   );

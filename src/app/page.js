@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Stats from "../components/Stats";
 import About from "../components/About";
+import Reviews from "../components/Reviews";
 import Services from "../components/Services";
 import Experience from "../components/Experience";
 import Location from "../components/Location";
@@ -9,15 +9,19 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#f8fafc_0%,#effdfa_100%)] text-slate-900">
+    <main className="min-h-screen text-slate-900">
       <Header />
       <Hero />
-      <Stats />
-      <About />
-      <Services />
-      <Experience />
-      <Location />
-      <Footer />
+      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#effdfa_100%)]">
+        <About />
+      </div>
+      <Reviews />
+      <div className="bg-[linear-gradient(180deg,#f8fafc_0%,#effdfa_100%)]">
+        <Services />
+        <Experience />
+        <Location />
+        <Footer />
+      </div>
     </main>
   );
 }
