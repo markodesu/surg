@@ -1,10 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, ShieldCheck, Star } from "lucide-react";
-
-const whatsappLink =
-  "https://wa.me/996700000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BA%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D1%83";
+import { ArrowRight, MessageCircle, Microscope, ShieldCheck } from "lucide-react";
+import { WHATSAPP_LINK_CONSULTATION } from "../lib/contacts";
 
 export default function Hero() {
   return (
@@ -18,8 +16,8 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-teal-100 bg-white/80 px-4 py-2 text-sm font-medium text-teal-700 shadow-sm backdrop-blur"
           >
-            <Star className="h-4 w-4 fill-current" />
-            Нейрохирург в Бишкеке
+            <Microscope className="h-4 w-4" />
+            Специалист по нейроэндоскопии и микронейрохирургии
           </motion.div>
 
           <motion.h1
@@ -28,7 +26,10 @@ export default function Hero() {
             transition={{ duration: 0.55, delay: 0.05 }}
             className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl"
           >
-            Байымбет Талайбеков
+            <span className="block text-2xl font-medium text-teal-700 sm:text-3xl lg:text-4xl">
+              Нейрохирург в Бишкеке
+            </span>
+            <span className="mt-2 block">Доктор Байымбет Талайбеков</span>
           </motion.h1>
 
           <motion.p
@@ -37,9 +38,9 @@ export default function Hero() {
             transition={{ duration: 0.55, delay: 0.12 }}
             className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl"
           >
-            Нейрохирург в Бишкеке, который ведет прием пациентов с болями в
-            спине и шее, межпозвоночными грыжами, неврологическими жалобами и
-            другими заболеваниями позвоночника и нервной системы.
+            Квалифицированная помощь при заболеваниях позвоночника и нервной
+            системы. Консультация, диагностика и лечение для пациентов из
+            Бишкека и Кыргызстана.
           </motion.p>
 
           <motion.div
@@ -49,7 +50,7 @@ export default function Hero() {
             className="mt-8 flex flex-col gap-4 sm:flex-row"
           >
             <a
-              href={whatsappLink}
+              href={WHATSAPP_LINK_CONSULTATION}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-teal-600/20 transition-transform hover:-translate-y-0.5"
@@ -61,7 +62,7 @@ export default function Hero() {
               href="#services"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-6 py-4 text-base font-semibold text-slate-900 backdrop-blur transition-transform hover:-translate-y-0.5"
             >
-              Специализация и помощь
+              Услуги и направления
               <ArrowRight className="h-5 w-5" />
             </a>
           </motion.div>
@@ -75,7 +76,7 @@ export default function Hero() {
             {[
               "10+ лет стажа",
               "1500+ консультаций",
-              "Опыт работы в Кыргызстане",
+              "Приём в Кыргызстане",
             ].map((item) => (
               <div
                 key={item}
@@ -102,16 +103,16 @@ export default function Hero() {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-white/60 bg-white/70 p-5 shadow-inner">
                 <img
                   src="/images/example.webp"
-                  alt="Доктор Байымбет Талайбеков, нейрохирург"
+                  alt="Доктор Байымбет Талайбеков, нейрохирург в Бишкеке"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="relative z-10 mt-auto grid gap-3 sm:grid-cols-2">
                   <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 backdrop-blur">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                      Что лечит
+                      Направления
                     </p>
                     <p className="mt-2 text-sm font-medium text-slate-900">
-                      Консультация, диагностика и сопровождение лечения
+                      Позвоночник, нервная система, консультация
                     </p>
                   </div>
                   <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 backdrop-blur">
@@ -119,8 +120,7 @@ export default function Hero() {
                       Специализация
                     </p>
                     <p className="mt-2 text-sm font-medium text-slate-900">
-                      Позвоночник, нервная система, локальная помощь в
-                      Кыргызстане
+                      Нейроэндоскопия и микронейрохирургия
                     </p>
                   </div>
                 </div>

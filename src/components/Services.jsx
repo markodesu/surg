@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Activity, AlignVerticalDistributeCenter, Bone, Brain, CheckCircle2, Cpu } from "lucide-react";
+import { WHATSAPP_LINK_CONSULTATION } from "../lib/contacts";
 
 const services = [
   {
@@ -50,11 +51,11 @@ export default function Services() {
           Услуги
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-          Что лечит нейрохирург
+          Направления лечения и услуги нейрохирурга
         </h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Здесь собраны основные направления помощи: позвоночник, нервная
-          система, консультация, диагностика и сопровождение лечения.
+          Позвоночник, нервная система, консультация и сопровождение лечения
+          для пациентов в Бишкеке и по всему Кыргызстану.
         </p>
       </div>
 
@@ -82,10 +83,12 @@ export default function Services() {
                 {service.description}
               </p>
               <a
-                href="#contacts"
+                href={WHATSAPP_LINK_CONSULTATION}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition-colors group-hover:text-teal-800"
               >
-                Связаться и записаться
+                Узнать стоимость и записаться
               </a>
             </motion.article>
           );

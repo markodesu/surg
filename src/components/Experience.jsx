@@ -27,18 +27,16 @@ export default function Experience() {
   const [activeCertificate, setActiveCertificate] = useState(null);
 
   return (
-    <section id="experience" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section id="certificates" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-700">
-          Кто ведет прием
+          Сертификаты
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-          Доктор и его специализация
+          Образование и квалификация
         </h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Здесь можно показать образование, сертификаты и профильную
-          подготовку доктора, чтобы сразу было понятно, кто принимает и чем
-          именно он занимается.
+          Дипломы, сертификаты и подтверждение профильной подготовки доктора.
         </p>
       </div>
 

@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { CalendarDays, MapPin, MessageCircle, PhoneCall } from "lucide-react";
-
-const whatsappLink =
-  "https://wa.me/996700000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%85%D0%B8%D1%80%D1%83%D1%80%D0%B3%D0%B0%20%D0%B2%20%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%D0%B5";
+import {
+  PHONE,
+  PHONE_DISPLAY,
+  WHATSAPP_LINK_APPOINTMENT,
+} from "../lib/contacts";
 
 export default function Location() {
   return (
@@ -14,11 +16,11 @@ export default function Location() {
           Контакты
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-          Адрес и как связаться
+          Где проходит приём в Бишкеке
         </h2>
         <p className="mt-4 text-lg leading-8 text-slate-600">
-          Здесь собраны адрес клиники, телефон и быстрый переход в WhatsApp,
-          чтобы пациент мог сразу задать вопрос и записаться на прием.
+          Адрес клиники, график работы, телефон и быстрый переход в WhatsApp —
+          всё для записи на приём нейрохирурга.
         </p>
       </div>
 
@@ -53,8 +55,8 @@ export default function Location() {
               <PhoneCall className="mt-1 h-5 w-5 text-teal-700" />
               <div>
                 <p className="font-semibold text-slate-950">Как связаться</p>
-                <a href="tel:+996555800766" className="mt-1 block leading-7 text-teal-700">
-                  +996 555 800 766
+                <a href={`tel:${PHONE}`} className="mt-1 block leading-7 text-teal-700">
+                  {PHONE_DISPLAY}
                 </a>
               </div>
             </div>
@@ -62,7 +64,7 @@ export default function Location() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href={whatsappLink}
+              href={WHATSAPP_LINK_APPOINTMENT}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-600/20 transition-transform hover:-translate-y-0.5"
@@ -71,7 +73,7 @@ export default function Location() {
               WhatsApp
             </a>
             <a
-              href="tel:+996700000000"
+              href={`tel:${PHONE}`}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition-transform hover:-translate-y-0.5"
             >
               Позвонить сейчас
