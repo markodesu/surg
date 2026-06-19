@@ -18,8 +18,37 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid min-h-dvh max-w-7xl items-center gap-12 px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-[1.05fr_0.85fr] lg:px-8">
-        <div className="max-w-3xl">
+      <div className="relative mx-auto grid min-h-dvh max-w-7xl items-center gap-8 px-4 pb-20 pt-28 sm:gap-10 sm:px-6 lg:grid-cols-[1.05fr_0.85fr] lg:gap-12 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.08 }}
+          className="relative order-1 mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:order-2 lg:max-w-md"
+        >
+          <div
+            className="absolute -inset-4 rounded-[2rem] bg-sky-500/10 blur-3xl sm:-inset-6"
+            aria-hidden="true"
+          />
+          <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/30 p-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm sm:rounded-[1.75rem]">
+            <div className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
+              <img
+                src="/images/example.webp"
+                alt="Доктор Байымбет Талайбеков, нейрохирург в Бишкеке"
+                className="aspect-[3/4] w-full object-cover object-top brightness-[0.92] saturate-[0.88] contrast-[1.03]"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-slate-950/25"
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 ring-1 ring-inset ring-white/10"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="order-2 max-w-3xl lg:order-1">
           <motion.p
             initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
@@ -105,35 +134,6 @@ export default function Hero() {
             ))}
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.12 }}
-          className="relative mx-auto hidden w-full max-w-md lg:block"
-        >
-          <div
-            className="absolute -inset-6 rounded-[2rem] bg-sky-500/10 blur-3xl"
-            aria-hidden="true"
-          />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-950/30 p-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm">
-            <div className="relative overflow-hidden rounded-[1.5rem]">
-              <img
-                src="/images/example.webp"
-                alt="Доктор Байымбет Талайбеков, нейрохирург в Бишкеке"
-                className="aspect-[3/4] w-full object-cover object-top brightness-[0.92] saturate-[0.88] contrast-[1.03]"
-              />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-slate-950/25"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute inset-0 ring-1 ring-inset ring-white/10"
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       <a
