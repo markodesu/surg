@@ -94,7 +94,7 @@ export default function Location() {
             href={CLINIC_2GIS_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-3 hidden text-sm font-medium text-sky-700 transition-colors hover:text-sky-800 md:inline-flex"
+            className="mt-3 inline-flex text-sm font-medium text-sky-700 transition-colors hover:text-sky-800"
           >
             Открыть в 2ГИС →
           </a>
