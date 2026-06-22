@@ -33,3 +33,21 @@ const build2GisWidgetUrl = () => {
 };
 
 export const CLINIC_2GIS_WIDGET_URL = build2GisWidgetUrl();
+
+export const CLINIC_ADDRESS =
+  "Кортекс, проспект Жибек-Жолу, 224. 720045, Свердловский район, Бишкек";
+export const CLINIC_HOURS =
+  "Пн–Сб: 09:00–18:00, Вс: по предварительной договорённости";
+
+export function buildWhatsAppAppointmentLink({ name, phone, message }) {
+  const text = [
+    "Здравствуйте! Хочу записаться на приём к нейрохирургу.",
+    name ? `Имя: ${name}` : null,
+    phone ? `Телефон: ${phone}` : null,
+    message ? `Комментарий: ${message}` : null,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeMessage(text)}`;
+}

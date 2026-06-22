@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
@@ -9,11 +12,21 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL("https://neuro.kg"),
-  title: "Нейрохирург в Бишкеке | Доктор Байымбет Талайбеков",
+  title: {
+    default: "Лучший нейрохирург Бишкек | Доктор Байымбет Талайбеков",
+    template: "%s | neuro.kg",
+  },
   description:
-    "Доктор Байымбет Талайбеков принимает в Бишкеке, специализируется на заболеваниях позвоночника и нервной системы, помогает с консультацией, лечением и дальнейшим маршрутом пациента.",
-  keywords:
-    "нейрохирург бишкек, доктор байымбет талайбеков, лечение позвоночника бишкек, консультация нейрохирурга, адрес клиники бишкек, связь с нейрохирургом",
+    "Лучший нейрохирург в Бишкеке — доктор Байымбет Талайбеков. Операция на позвоночник в Кыргызстане, лечение грыж, консультация и запись через WhatsApp.",
+  keywords: [
+    "лучший нейрохирург бишкек",
+    "операция на позвоночник кыргызстан",
+    "нейрохирург бишкек",
+    "доктор байымбет талайбеков",
+    "лечение позвоночника бишкек",
+    "межпозвоночная грыжа лечение",
+    "консультация нейрохирурга",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -22,11 +35,10 @@ export default function RootLayout({ children }) {
       lang="ru"
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <head>
-        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
-      </head>
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
-        {children}
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );
