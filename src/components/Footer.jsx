@@ -13,14 +13,6 @@ import Map2Gis from "./Map2Gis";
 export default function Footer() {
   return (
     <footer id="contacts">
-      <div
-        className="h-28 bg-cover bg-center sm:h-36"
-        style={{ backgroundImage: "url('/images/kyrgyzstan.jpg')" }}
-        aria-hidden="true"
-      >
-        <div className="h-full bg-blue-950/40" />
-      </div>
-
       <section className="border-t border-slate-200 bg-slate-50 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-5xl">
           <ContactPanel />
