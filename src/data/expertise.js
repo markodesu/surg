@@ -31,6 +31,90 @@ export const expertiseTabs = [
           "Комплексный подход к хроническому болевому синдрому и защемлениям.",
         image: "/images/conditions/back-pain.jpg",
       },
+      {
+        title: "Малоинвазивная хирургия позвоночника",
+        slug: "maloinvazivnaya-hirurgiya",
+        description:
+          "Минимально травматичные операции с быстрым восстановлением.",
+        image: "/images/trust/minimally-invasive.jpg",
+      },
+      {
+        title: "Замена межпозвоночного диска",
+        slug: "zamena-diska",
+        description:
+          "Эндопротезирование дисков при дегенеративных заболеваниях.",
+        image: "/images/conditions/spine-hernia.jpg",
+      },
+      {
+        title: "Спондилодез",
+        slug: "spondilodez",
+        description:
+          "Фиксация позвонков для стабилизации позвоночника.",
+        image: "/images/conditions/scoliosis.jpg",
+      },
+      {
+        title: "Компрессионные переломы и кифопластика",
+        slug: "kompressionnye-perelomy",
+        description:
+          "Лечение переломов позвонков с помощью цементопластики.",
+        image: "/images/conditions/back-pain.jpg",
+      },
+      {
+        title: "Ишиас",
+        slug: "ishias",
+        description:
+          "Лечение воспаления седалищного нерва и боли в ноге.",
+        image: "/images/conditions/back-pain.jpg",
+      },
+      {
+        title: "Спондилолистез",
+        slug: "spondilolistez",
+        description:
+          "Смещение позвонков и методы хирургической коррекции.",
+        image: "/images/conditions/spine-stenosis.jpg",
+      },
+      {
+        title: "Защемление нерва и радикулопатия",
+        slug: "zashchemlenie-nerva",
+        description:
+          "Диагностика и лечение корешкового синдрома.",
+        image: "/images/conditions/neuroma.jpg",
+      },
+      {
+        title: "Опухоли позвоночника",
+        slug: "opuholi-pozvonochnika",
+        description:
+          "Хирургическое удаление опухолей позвоночника и спинного мозга.",
+        image: "/images/conditions/brain-tumor.jpg",
+      },
+      {
+        title: "Травма спинного мозга",
+        slug: "travma-spinnogo-mozga",
+        description:
+          "Неотложная помощь при повреждениях спинного мозга.",
+        image: "/images/conditions/head-injury.jpg",
+      },
+      {
+        title: "Стимуляция спинного мозга",
+        slug: "stimulyaciya-spinnogo-mozga",
+        description:
+          "Нейростимуляция для лечения хронической боли.",
+        image: "/images/conditions/hydrocephalus.jpg",
+      },
+      {
+        title: "Дисфункция крестцово-подвздошного сустава",
+        slug: "dysfunkciya-sustava",
+        description:
+          "Лечение боли в пояснице и крестцовой области.",
+        image: "/images/conditions/back-pain.jpg",
+      },
+      {
+        title: "Боль в шее",
+        slug: "bol-v-shee",
+        description:
+          "Консервативное и хирургическое лечение шейного остеохондроза.",
+        image: "/images/conditions/head-injury.jpg",
+      },
     ],
   },
   {

@@ -2,13 +2,29 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 import { expertiseTabs } from "../data/expertise";
 
 export default function ExpertiseTabs() {
   const [activeTab, setActiveTab] = useState(expertiseTabs[0].id);
+  const [spinePage, setSpinePage] = useState(1);
   const current = expertiseTabs.find((tab) => tab.id === activeTab);
+
+  const isSpineTab = activeTab === "spine";
+  const spineItems = isSpineTab ? current.items.slice((spinePage - 1) * 8, spinePage * 8) : current.items;
+
+  // Auto-rotate spine carousel every 5 seconds
+  useEffect(() => {
+    if (!isSpineTab) return;
+    
+    const timer = setInterval(() => {
+      setSpinePage((p) => (p % 2) + 1);
+    }, 5000);
+    
+    return () => clearInterval(timer);
+  }, [isSpineTab]);
 
   return (
     <section id="expertise" className="bg-slate-50 py-16 sm:py-20">
@@ -22,8 +38,14 @@ export default function ExpertiseTabs() {
             <button
               key={tab.id}
               type="button"
-              onClick={() => setActiveTab(tab.id)}
-              onMouseEnter={() => setActiveTab(tab.id)}
+              onClick={() => {
+                setActiveTab(tab.id);
+                if (tab.id !== "spine") setSpinePage(1);
+              }}
+              onMouseEnter={() => {
+                setActiveTab(tab.id);
+                if (tab.id !== "spine") setSpinePage(1);
+              }}
               className={`relative flex-1 px-3 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] transition-colors sm:px-6 sm:text-sm ${
                 activeTab === tab.id
                   ? "text-white"
@@ -44,14 +66,14 @@ export default function ExpertiseTabs() {
 
         <AnimatePresence mode="wait">
           <motion.div
-            key={current.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            key={`${current.id}-${isSpineTab ? spinePage : 1}`}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
-            {current.items.map((item, index) => (
+            {(isSpineTab ? spineItems : current.items).map((item, index) => (
               <Link
                 key={item.slug}
                 href={`/blog/${item.slug}`}
@@ -79,6 +101,30 @@ export default function ExpertiseTabs() {
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {isSpineTab && (
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={() => setSpinePage((p) => Math.max(1, p - 1))}
+              disabled={spinePage === 1}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <span className="text-sm text-slate-600">
+              {spinePage} / 2
+            </span>
+            <button
+              type="button"
+              onClick={() => setSpinePage((p) => Math.min(2, p + 1))}
+              disabled={spinePage === 2}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700 disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
