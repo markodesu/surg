@@ -103,7 +103,7 @@ export default function HeroCarousel() {
           <button
             type="button"
             onClick={prevReview}
-            className="absolute left-0 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700"
+            className="absolute left-6 top-1/2 inline-flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700"
             aria-label="Предыдущий отзыв"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -111,7 +111,7 @@ export default function HeroCarousel() {
           <button
             type="button"
             onClick={nextReview}
-            className="absolute right-0 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700"
+            className="absolute right-6 top-1/2 inline-flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-sky-300 hover:text-sky-700"
             aria-label="Следующий отзыв"
           >
             <ChevronRight className="h-5 w-5" />
@@ -126,7 +126,7 @@ export default function HeroCarousel() {
               transition={{ duration: 0.3 }}
               className="text-center"
             >
-              <p className="text-base leading-8 text-slate-700 sm:text-lg sm:leading-9">
+              <p className="text-base italic leading-8 text-slate-700 sm:text-lg sm:leading-9 font-serif">
                 {reviews[reviewIndex].text}
               </p>
               <p className="mt-5 text-sm font-semibold text-slate-900">

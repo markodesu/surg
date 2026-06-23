@@ -39,18 +39,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 shadow-md">
       <div className="bg-blue-950/70 backdrop-blur-sm text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-6 sm:px-6 lg:px-8">
           <Link href="/" className="group flex min-w-0 items-center gap-3">
-            <img
-              src="/images/logo.png"
-              alt="Логотип нейрохирурга Байымбета Талайбекова"
-              className="h-11 w-11 shrink-0 rounded-lg border border-white/20 bg-white/10 p-1"
-            />
             <span className="hidden min-w-0 flex-col leading-tight sm:flex">
-              <span className="truncate text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-sky-200">
+              <span className="truncate text-sm font-semibold uppercase tracking-[0.22em] text-sky-200">
                 Нейрохирург
               </span>
-              <span className="truncate text-sm font-semibold tracking-tight">
+              <span className="truncate text-xl font-bold tracking-tight">
                 Байымбет Талайбеков
               </span>
             </span>
