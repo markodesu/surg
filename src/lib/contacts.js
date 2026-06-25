@@ -37,7 +37,7 @@ export const CLINIC_2GIS_WIDGET_URL = build2GisWidgetUrl();
 export const CLINIC_ADDRESS =
   "Кортекс, проспект Жибек-Жолу, 224. 720045, Свердловский район, Бишкек";
 export const CLINIC_HOURS =
-  "Пн–Сб: 09:00–18:00, Вс: по предварительной договорённости";
+  "Пн–Сб: 08:00–17:00, Вс: по предварительной договорённости";
 
 export function buildWhatsAppAppointmentLink({ name, phone, message }) {
   const text = [

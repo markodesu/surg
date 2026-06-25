@@ -142,6 +142,34 @@ export const expertiseTabs = [
           "Неотложная и плановая помощь при черепно-мозговых травмах.",
         image: "/images/conditions/head-injury.jpg",
       },
+      {
+        title: "Невралгия тройничного нерва",
+        slug: "nevralgiya-trojnichnogo-nerva-mozg",
+        description:
+          "Диагностика и терапия приступообразной лицевой боли.",
+        image: "/images/conditions/trigeminal.jpg",
+      },
+      {
+        title: "Опухоли гипофиза",
+        slug: "opuholi-gipofiza",
+        description:
+          "Лечение аденом гипофиза и гормонально активных опухолей.",
+        image: "/images/conditions/brain-tumor.jpg",
+      },
+      {
+        title: "Аневризмы сосудов головного мозга",
+        slug: "anevrizmy-sosudov-golovnogo-mozga",
+        description:
+          "Эндоваскулярное и хирургическое лечение аневризм и сосудистых мальформаций.",
+        image: "/images/conditions/neuroma.jpg",
+      },
+      {
+        title: "Аномалия Киари",
+        slug: "anomaliya-khari",
+        description:
+          "Диагностика и лечение аномалий Киари.",
+        image: "/images/conditions/trigeminal.jpg",
+      },
     ],
   },
   {
