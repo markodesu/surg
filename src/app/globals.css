@@ -85,3 +85,28 @@ img {
   /* Make aspect-[4/3] less tall on mobile */
   .aspect-\[4\/3\] { aspect-ratio: 3 / 2; }
 }
+
+/* Target blog/expertise cards specifically to make them more compact on phones */
+@media (max-width: 640px) {
+  /* Make square cards shorter (wider relative to height) */
+  #expertise .aspect-square {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Reduce title size and padding inside the card overlay */
+  #expertise h3 {
+    font-size: 1rem;
+    line-height: 1.15rem;
+  }
+
+  #expertise .p-4 {
+    padding: 0.5rem !important;
+  }
+
+  /* Ensure images inside expertise cards don't exceed a comfortable height */
+  #expertise img {
+    max-height: 45vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
