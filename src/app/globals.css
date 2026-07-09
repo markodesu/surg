@@ -47,3 +47,23 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+/* Make images responsive and avoid oversized images on small screens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  /* Prevent images inside clickable/cards from becoming taller than viewport */
+  img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  /* Reduce some large fixed-height components if necessary */
+  .h-\[24rem\] {
+    height: 18rem /* ~288px */;
+  }
+}
