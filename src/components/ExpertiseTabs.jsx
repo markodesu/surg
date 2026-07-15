@@ -27,13 +27,13 @@ export default function ExpertiseTabs() {
   }, [isSpineTab]);
 
   return (
-    <section id="expertise" className="bg-slate-50 py-16 sm:py-20">
+    <section id="expertise" className="bg-slate-50 py-10 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl font-light tracking-tight text-slate-900 sm:text-4xl">
           Направления <span className="font-semibold">лечения</span>
         </h2>
 
-        <div className="mx-auto mt-10 flex max-w-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="mx-auto mt-6 flex max-w-3xl border border-slate-200 bg-white shadow-sm sm:mt-10">
           {expertiseTabs.map((tab) => (
             <button
               key={tab.id}
@@ -71,28 +71,29 @@ export default function ExpertiseTabs() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:gap-4 lg:grid-cols-4"
           >
             {(isSpineTab ? spineItems : current.items).map((item, index) => (
               <Link
                 key={item.slug}
                 href={`/blog/${item.slug}`}
-                className="group relative aspect-square overflow-hidden"
+                className="group relative aspect-[4/3] overflow-hidden"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.04 }}
-                  className="h-full w-full"
+                  className="relative h-full w-full"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  <div
+                    role="img"
+                    aria-label={item.title}
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url("${item.image}")` }}
                   />
                   <div className="absolute inset-0 bg-blue-950/55 transition-colors group-hover:bg-blue-950/45" />
-                  <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
-                    <h3 className="text-base font-semibold uppercase tracking-wide text-white sm:text-lg">
+                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center sm:p-4">
+                    <h3 className="text-[0.65rem] font-semibold uppercase leading-tight tracking-wide text-white sm:text-base lg:text-lg">
                       {item.title}
                     </h3>
                   </div>
