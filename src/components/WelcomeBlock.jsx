@@ -22,7 +22,7 @@ export default function WelcomeBlock() {
               <img
                 src={DOCTOR_PHOTO}
                 alt="Доктор Байымбет Талайбеков, нейрохирург в Бишкеке"
-                className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 hover:scale-105 sm:aspect-[3/4]"
+                className="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 hover:scale-105 sm:aspect-[3/4]"
               />
             </div>
           </div>
