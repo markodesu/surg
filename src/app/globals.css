@@ -62,19 +62,14 @@ img {
     width: 100%;
     object-fit: cover;
   }
-  /* Reduce some large fixed-height components if necessary */
+
+  /* Reduce hero height on mobile */
   .h-\[24rem\] {
-    height: 18rem /* ~288px */;
+    height: 16rem;
   }
-}
 
-/* Further mobile tweaks to make card-like components fit viewport better */
-@media (max-width: 640px) {
-  /* Reduce common fixed heights used for tiles */
-  .h-44 { height: 10rem !important; }
-  .h-48 { height: 11rem !important; }
-  .lg\:h-52 { height: 12rem !important; }
-
-  /* Make aspect-[4/3] less tall on mobile */
-  .aspect-\[4\/3\] { aspect-ratio: 3 / 2; }
+  /* Make expertise cards less tall on mobile */
+  .aspect-\[4\/3\] {
+    aspect-ratio: 3 / 2;
+  }
 }
